@@ -1,0 +1,197 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="CVGS_Iteration_1.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <%--bootstrap css--%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <%--datatables css--%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+    <%--fontawesome css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+
+    <%--our custom css--%>
+    <link href="css/customStyleSheet.css" rel="stylesheet" />
+
+    <%--jquery--%>
+    <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+
+    <%--popper js--%>
+    <script src="bootstrap/js/popper.min.js"></script>
+
+    <%--bootstrap js--%>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <%-- DataTabales js --%>
+    <script src="datatables/js/jquery.dataTables.min.js"></script>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div>
+
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#">
+                    <img src="images/corecoders.jpeg" height="90" width="90" />
+                    
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="HomePage" runat="server" href="homePage.aspx" OnClick="HomePage_Click">
+                                Home
+                            </asp:LinkButton>
+                        </li>
+                        
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton7" href="adminLogin.aspx" runat="server" OnClick="LinkButton7_Click">
+                                Admin Login
+                            </asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton11" href="adminGameManagement.aspx" runat="server" OnClick="LinkButton11_Click" Visible="False">
+                                Game Community
+                            </asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton8" runat="server" href="adminGameInventory.aspx" OnClick="LinkButton8_Click" Visible="False">
+                                Game Inventory
+                            </asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton9" runat="server" href="adminUpcomingGameEvents.aspx" OnClick="LinkButton9_Click" Visible="False">
+                                Game Event
+                            </asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton10" runat="server" href="adminMerchandise.aspx" OnClick="LinkButton10_Click" Visible="False">
+                                Merchandise
+                            </asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton16" runat="server" href="adminReport.aspx" OnClick="LinkButton10_Click" Visible="False">
+                                Reports
+                            </asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton19" runat="server" href="adminReviewPage.aspx" OnClick="LinkButton19_Click" Visible="False">
+                                Approval Rating/Feedback Page
+                            </asp:LinkButton>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">                            <asp:LinkButton class="nav-link" ID="LinkButton18" runat="server" href="friendsAndFamily.aspx" Visible="False" OnClick="LinkButton20_Click">                                Friends & Family List                            </asp:LinkButton>                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton12" runat="server" href="userProfile.aspx" Visible="False" OnClick="LinkButton12_Click">
+                                User Profile
+                            </asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton13" runat="server" Visible="False" href="wishlist.aspx" OnClick="LinkButton13_Click">
+                                Games Wish List
+                            </asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton17" runat="server" Visible="False" href="merchandiseWishList.aspx" OnClick="LinkButton13_Click">
+                                Merchandise Wish List
+                            </asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton1" href="userLogin.aspx" runat="server" OnClick="LinkButton1_Click">
+                                User Login
+                            </asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton2" href="registration.aspx" runat="server" OnClick="LinkButton2_Click">
+                                Sign Up
+                            </asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton4" href="viewGame.aspx" runat="server" Visible="False" OnClick="LinkButton4_Click">
+                                View Games
+                            </asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton14" href="viewMerchandise.aspx" runat="server" Visible="False" OnClick="LinkButton4_Click">
+                                Merchandise Item
+                            </asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton15" href="merchandiseAddToCart.aspx" runat="server" Visible="False" OnClick="LinkButton4_Click">
+                                Merchandise Cart
+                            </asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton6" href="addToCart.aspx" runat="server" Visible="False" OnClick="LinkButton6_Click">
+                                Games Cart
+                            </asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton5" runat="server" Visible="False" Font-Bold="True">
+                                Hello User
+                            </asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" OnClick="LinkButton3_Click" Visible="False">
+                                Logout
+                            </asp:LinkButton>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </nav>
+        </div>
+
+        <%-- Main Content Placeholder --%>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceholder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <footer>
+
+
+
+            <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>
+                            &copy All Right Reserved. <a class="footerlinks" href="#" target="_blank">Core Coders
+                            </a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </form>
+</body>
+</html>
